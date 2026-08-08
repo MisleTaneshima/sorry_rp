@@ -96,6 +96,6 @@ function handleYesClick() {
 
     // Cambia al gatito tierno, feliz y bailando con corazones
     if (gif) {
-        gif.src = "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbW5lenZyZHI5OXM2eW95b3pmMG40cWVrMDhtNjVuM3A4dGNxa2g2dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/VM1fcpu2bKs1e2Kdbj/giphy.gif"; 
+        gif.src = "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWZxdnE3YTdhYjl4dWVuaG03Z2lpc2h2MjNxbDUza3lhOW0xb2I0ZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/pbKSEFrEEudOIclaL8/giphy.gif"; 
     }
 }
