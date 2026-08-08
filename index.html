@@ -21,8 +21,8 @@
 
         <!-- Contenedor de botones en paralelo con Flexbox -->
         <div class="buttons">
-            <button class="yes-button" onclick="playAudio(); handleYesClick();">Sip ♡</button>             
-            <button class="no-button" onclick="handleNoClick()">Nou ‹/𝟹</button>
+            <button class="yes-button" onclick="playHappyAudio(); handleYesClick();">Sip ♡</button>             
+            <button class="no-button" onclick="playSadAudio(); handleNoClick();">Nou ‹/𝟹</button>
         </div>
 
         <!-- Contenedor del GIF -->
@@ -30,22 +30,43 @@
             <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbW5lenZyZHI5OXM2eW95b3pmMG40cWVrMDhtNjVuM3A4dGNxa2g2dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/VM1fcpu2bKs1e2Kdbj/giphy.gif" alt="Cute GIF">
         </div>
 
-        <!-- Elemento de audio oculto -->
-        <audio id="audio">
+        <!-- CANCIÓN 1: Para cuando presiona "No" (Camilo Sesto) -->
+        <audio id="sad-audio">
             <source src="Camilo_Sesto_Perdoname17.mp3" type="audio/mp3">
-        </audio>        
+        </audio>
+
+        <!-- CANCIÓN 2: Para cuando presiona "Sí" (Pon el nombre de tu archivo aquí) -->
+        <audio id="happy-audio">
+            <source src="Zhamira_Estrellita.mp3" type="audio/mp3">
+        </audio>
+
+        <!-- Elemento de audio oculto -->
+        <!--<audio id="audio">
+            <source src="Camilo_Sesto_Perdoname17.mp3" type="audio/mp3">
+        </audio>-->     
     </div>
 
     <!-- Enlace al archivo de lógica -->
     <script src="script.js"></script>
     
     <script>
-    function playAudio() {
-        var audio = document.getElementById("audio");
-        // Intentamos reproducir el audio cuando el usuario interactúa
-        audio.play().catch(function(error) {
-            console.log("La reproducción automática fue bloqueada por el navegador:", error);
-        });
+    var sadAudio = document.getElementById("sad-audio");
+    var happyAudio = document.getElementById("happy-audio");
+
+    function playSadAudio() {
+        // Solo la reproduce la primera vez que se presiona "No" si no estaba sonando ya
+        if (sadAudio.paused && happyAudio.paused) {
+            sadAudio.play().catch(function(e) { console.log("Bloqueado:", e); });
+        }
+    }
+
+    function playHappyAudio() {
+        // Pausa la canción triste por completo y reinicia su tiempo
+        sadAudio.pause();
+        sadAudio.currentTime = 0;
+        
+        // Reproduce la nueva canción feliz
+        happyAudio.play().catch(function(e) { console.log("Bloqueado:", e); });
     }
     </script>
 </body>
