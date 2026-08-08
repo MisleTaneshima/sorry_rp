@@ -3,7 +3,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
+    margin: 5;
     background-color: #9d68dd;
     font-family: 'Arial', sans-serif;
     flex-direction: column;
