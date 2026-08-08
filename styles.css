@@ -19,7 +19,8 @@ body {
   }
   
   .buttons {
-    margin-top: 50px;
+    margin-top: 50px; 
+    margin: 30;
   }
   
   .yes-button {
