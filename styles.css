@@ -3,7 +3,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 5;
+    margin: 0; /* Mantiene el body limpio */
+    padding: 0 20px; /* Agrega 20px de espacio libre a la izquierda y derecha */
     background-color: #9d68dd;
     font-family: 'Arial', sans-serif;
     flex-direction: column;
