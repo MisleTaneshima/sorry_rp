@@ -73,11 +73,9 @@ function handleNoClick() {
     const noButton = document.querySelector('.no-button');
     const yesButton = document.querySelector('.yes-button');
     
-    // Cambia el texto del botón "No"
     noButton.textContent = messages[messageIndex];
     messageIndex = (messageIndex + 1) % messages.length;
     
-    // Hace crecer el botón "Sip" de forma progresiva
     const currentSize = parseFloat(window.getComputedStyle(yesButton).fontSize);
     yesButton.style.fontSize = `${currentSize * 1.3}px`;
     yesButton.style.padding = `${parseFloat(window.getComputedStyle(yesButton).paddingTop) * 1.2}px ${parseFloat(window.getComputedStyle(yesButton).paddingLeft) * 1.2}px`;
@@ -89,17 +87,15 @@ function handleYesClick() {
     const buttonsContainer = document.querySelector('.buttons');
     const gif = document.querySelector('.gif_container img');
 
-    // Cambia los textos de la página al aceptar
-    if (h1) h1.textContent = "¡Gracias por perdonarme! 🥺❤️";
-    if (carta) carta.textContent = "Sabía que tu gran corazón no me dejaría ir. Te quiero demasiado, Paolo. Prometo que vamos a estar bien y cuidaré mejor lo nuestro.";
+    if (h1) h1.textContent = "¡Awww Gracias por perdonarme! ❤️";
+    if (carta) carta.textContent = "Te quiero Paolo. Cuidaré mejor lo nuestro ya sea como sólo amigos o como tú quieras.";
 
-    // Oculta los botones por completo
     if (buttonsContainer) {
         buttonsContainer.style.display = 'none';
     }
 
-    // Cambia el GIF triste por uno de celebración feliz
+    // Cambia al gatito tierno, feliz y bailando con corazones
     if (gif) {
-        gif.src = "https://giphy.com"; 
+        gif.src = "https://tenor.com"; 
     }
 }
