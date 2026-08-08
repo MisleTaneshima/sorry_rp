@@ -37,7 +37,7 @@ h1 {
     justify-content: center;
     align-items: center;
     gap: 15px; 
-    margin-top: 20px;
+    margin-top: 10px;
     min-height: 100px; /* Espacio reservado para cuando crezca el botón */
 }
 
@@ -67,7 +67,7 @@ button {
 }
 
 .gif_container img {
-    max-width: 100%;
+    max-width: 150%;
     height: auto;
     border-radius: 10px;
     margin-top: 20px;
