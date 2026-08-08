@@ -96,6 +96,6 @@ function handleYesClick() {
 
     // Cambia al gatito tierno, feliz y bailando con corazones
     if (gif) {
-        gif.src = "https://tenor.com"; 
+        gif.src = "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbW5lenZyZHI5OXM2eW95b3pmMG40cWVrMDhtNjVuM3A4dGNxa2g2dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/VM1fcpu2bKs1e2Kdbj/giphy.gif"; 
     }
 }
