@@ -54,17 +54,17 @@
 })();
 */
 const messages = [
-    "jajaj noo Estás seguro ?",
-    "Súper seguro ?",
-    "Súper hiper mega segurísimo ?",
-    "Estás decidido ?",
-    "Ay no vale Por fa chamo ...",
-    "Piénsalo bien ¯\_(ツ)_/¯",
-    "Si dices que no estatré chimbo ...",
-    "Muyyyyyy chimbo ...",
-    "Estare muy muy muy muy tiste...",
-    "Ya vale, dale en no...",
-    "Es bromita, di que si mailove ♡♡"
+    "jajaj noo ¿Estás seguro?",
+    "¿Súper seguro?",
+    "¿Súper hiper mega segurísimo?",
+    "¿Estás decidido?",
+    "Ay no vale... Por fa chamo...",
+    "Piénsalo bien ¯\\_(ツ)_/¯",
+    "Si dices que no estaré chimbo...",
+    "Muyyyyyy chimbo...",
+    "Estaré muy muy muy muy triste...",
+    "Ya vale, dale en Sip... 🥺",
+    "Es bromita, di que sí mailove ♡♡"
 ];
 
 let messageIndex = 0;
@@ -72,12 +72,34 @@ let messageIndex = 0;
 function handleNoClick() {
     const noButton = document.querySelector('.no-button');
     const yesButton = document.querySelector('.yes-button');
+    
+    // Cambia el texto del botón "No"
     noButton.textContent = messages[messageIndex];
     messageIndex = (messageIndex + 1) % messages.length;
+    
+    // Hace crecer el botón "Sip" de forma progresiva
     const currentSize = parseFloat(window.getComputedStyle(yesButton).fontSize);
-    yesButton.style.fontSize = `${currentSize * 1.5}px`;
+    yesButton.style.fontSize = `${currentSize * 1.3}px`;
+    yesButton.style.padding = `${parseFloat(window.getComputedStyle(yesButton).paddingTop) * 1.2}px ${parseFloat(window.getComputedStyle(yesButton).paddingLeft) * 1.2}px`;
 }
 
 function handleYesClick() {
-    window.location.href = "yes_page.html";
+    const h1 = document.querySelector('h1');
+    const carta = document.querySelector('.carta');
+    const buttonsContainer = document.querySelector('.buttons');
+    const gif = document.querySelector('.gif_container img');
+
+    // Cambia los textos de la página al aceptar
+    if (h1) h1.textContent = "¡Gracias por perdonarme! 🥺❤️";
+    if (carta) carta.textContent = "Sabía que tu gran corazón no me dejaría ir. Te quiero demasiado, Paolo. Prometo que vamos a estar bien y cuidaré mejor lo nuestro.";
+
+    // Oculta los botones por completo
+    if (buttonsContainer) {
+        buttonsContainer.style.display = 'none';
+    }
+
+    // Cambia el GIF triste por uno de celebración feliz
+    if (gif) {
+        gif.src = "https://giphy.com"; 
+    }
 }
