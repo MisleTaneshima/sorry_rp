@@ -1,41 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Me perdonas Pao ?</title>
+    <title>¿Me perdonas, Pao?</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Hola Paolo, te explico algo rápidito... Sé que a veces no actúo de la mejor manera, pero en serio no quiero que te alejes, sé que siempre es por mis errores. Desde el 2022 mi vida es mucho más linda porque te conocí y, de alguna forma, te sigo viendo como la primera vez, sin importar el tiempo que pase. Hoy te quiero pedir que te quedes bueno si quieres... Perdóname, por fa Síiiiiiiiiii ?"</h1>
-        <div class="buttons" style="display: flex; justify-content: center; gap: 15px;">
-            <div class="regalo" onclick="playAudio()">
-            <button class="yes-button" onclick="handleYesClick()">Sip ♡</button>             
+        <!-- Título principal -->
+        <h1>Para Paolo...</h1>
+        
+        <!-- Párrafo de la carta -->
+        <p class="carta">
+            Sé que a veces no actúo de la mejor manera, pero en serio no quiero que te alejes, 
+            sé que siempre es por mis errores. Desde el 2022 mi vida es mucho más linda porque 
+            te conocí y, de alguna forma, te sigo viendo como la primera vez, sin importar el 
+            tiempo que pase. Hoy te quiero pedir que te quedes... bueno, si quieres. 
+            Perdóname, por fa. ¿Síiiiiiiiiii?
+        </p>
+
+        <!-- Contenedor de botones en paralelo con Flexbox -->
+        <div class="buttons">
+            <button class="yes-button" onclick="playAudio(); handleYesClick();">Sip ♡</button>             
             <button class="no-button" onclick="handleNoClick()">Nou ‹/𝟹</button>
-            </div>
         </div>
+
+        <!-- Contenedor del GIF -->
         <div class="gif_container">
-            <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbW5lenZyZHI5OXM2eW95b3pmMG40cWVrMDhtNjVuM3A4dGNxa2g2dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/VM1fcpu2bKs1e2Kdbj/giphy.gif" alt="Cute GIF">
+            <img src="https://giphy.com" alt="Cute GIF">
         </div>
 
         <!-- Elemento de audio oculto -->
-        <audio id="audio" controls style="display: none">
+        <audio id="audio">
             <source src="Camilo_Sesto_Perdoname17.mp3" type="audio/mp3">
         </audio>
     </div>
+
+    <!-- Enlace al archivo de lógica -->
     <script src="script.js"></script>
+    
     <script>
     function playAudio() {
-        // Obtén el elemento de audio
         var audio = document.getElementById("audio");
-        // Reproduce el audio
-        audio.play();
-        $("#contenido").toggle();
-        onClick();
-        $("#regalo").toggle();
-        $("#regaloAb").toggle();
+        // Intentamos reproducir el audio cuando el usuario interactúa
+        audio.play().catch(function(error) {
+            console.log("La reproducción automática fue bloqueada por el navegador:", error);
+        });
     }
-  </script>
+    </script>
 </body>
 </html>
