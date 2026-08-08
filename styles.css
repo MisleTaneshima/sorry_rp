@@ -7,7 +7,7 @@ body {
     padding: 0 20px; /* Agrega 20px de espacio libre a la izquierda y derecha */
     background-color: #9d68dd;
     /*font-family: 'Arial', sans-serif;*/
-    font-family:  'forum', cursive;
+    font-family:  'Lucida Handwriting';
     flex-direction: column;
   }
   
