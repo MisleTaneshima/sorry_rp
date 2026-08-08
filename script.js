@@ -54,16 +54,17 @@
 })();
 */
 const messages = [
-    "Estas segura?",
-    "Realmente segura??",
-    "Estas decidida?",
-    "Porfavor mi niña...",
-    "Piensalo bieeen!",
-    "Si dices que no m pondre triste...",
-    "Muyyyyyy tristee...",
-    "estare muy muy muy muy trosteee...",
-    "bueno ya, dale en no...",
-    "Es bromis, di que si mi vida hermosa!♡♡"
+    "jajaj noo Estás seguro ?",
+    "Súper seguro ?",
+    "Súper hiper mega segurísimo ?",
+    "Estás decidido ?",
+    "Ay no vale Por fa chamo ...",
+    "Piénsalo bien ¯\_(ツ)_/¯",
+    "Si dices que no estatré chimbo ...",
+    "Muyyyyyy chimbo ...",
+    "Estare muy muy muy muy tiste...",
+    "Ya vale, dale en no...",
+    "Es bromita, di que si mailove ♡♡"
 ];
 
 let messageIndex = 0;
