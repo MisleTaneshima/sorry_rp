@@ -88,7 +88,7 @@ function handleYesClick() {
     const gif = document.querySelector('.gif_container img');
 
     if (h1) h1.textContent = "¡Awww Gracias por perdonarme! ❤️";
-    if (carta) carta.textContent = "Te quiero Paolo. Cuidaré mejor lo nuestro ya sea como sólo amigos o como tú quieras.";
+    if (carta) carta.textContent = "Te quiero Paolo. Cuidaré mucho mejor lo nuestro ya sea como sólo amigos o como lo que tú quieras, yo estaré aquí lo que tú quieras";
 
     if (buttonsContainer) {
         buttonsContainer.style.display = 'none';
